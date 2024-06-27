@@ -1,5 +1,7 @@
 venv/ 
 .vscode/
 __pycache__/
-model/model.pth/
+
+model/
+
 

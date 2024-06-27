@@ -48,9 +48,9 @@ class QTrainer:
             done = (done,)
             
         #1 : predicted 0 valiues with current state
-        pred = = self.model(state)
+        pred = self.model(state)
         
-        target = prd.clone()
+        target = pred.clone()
         for idx in range(len(done)):
             Q_new = reward[idx]
             if not done[idx]:

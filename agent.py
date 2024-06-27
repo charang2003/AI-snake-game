@@ -129,7 +129,7 @@ def train():
             
             if score > record:
                 record = score
-                #agent.model store
+                agent.model.save()
                 
             print('Game', agent.n_game,'Score',score,'Record:',record)
 

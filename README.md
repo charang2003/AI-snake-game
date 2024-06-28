@@ -29,15 +29,18 @@ This project implements an AI agent trained with Deep Q-Learning to play the cla
    ```bash
    pip install -r requirements.txt
 
-
-### Usage
+# Usage
 
 To train the AI agent and watch it play Snake:
 
    ```bash
-   python agent.py
+      python agent.py
 
-The game will start, and you can observe the AI's gameplay and training progress through the console and any plotted metrics.
 
-### Credits
+# Credits
+
 - This project is based on OpenAI's Snake Game environment and Deep Q-Learning techniques.
+
+# License
+
+This project is licensed under the MIT License.

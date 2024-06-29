@@ -31,7 +31,7 @@ BLUE2 = (0, 100, 255)
 BLACK = (0,0,0)
 
 BLOCK_SIZE = 20   # size of each block in game
-SPEED = 40   #speed of snake in game
+SPEED = 300   #speed of snake in game
 
 class SnakeGameAI:
     
@@ -85,31 +85,33 @@ class SnakeGameAI:
                 quit()
 
         # 2. move
-        self._move(action) # update the head
+        self._move(action)  # update the head
         self.snake.insert(0, self.head)
-        
+
         # 3. check if game over
         reward = 0
         game_over = False
-        if self.is_collision() or self.frame_iteration > 100*len(self.snake):
+        if self.is_collision() or self.frame_iteration > 200:  # Frame limitation to avoid circling
             game_over = True
             reward = -10
             return reward, game_over, self.score
-            
+
         # 4. place new food or just move
         if self.head == self.food:
             self.score += 1
-            reward += 10
+            reward = 10
             self._place_food()
+            self.frame_iteration = 0  # Reset frame iteration on eating food
         else:
             self.snake.pop()
-        
+
         # 5. update ui and clock
         self._update_ui()
         self.clock.tick(SPEED)
         # 6. return game over and score
         return reward, game_over, self.score
-    
+
+
     def is_collision(self, pt=None):
         if pt is None:
             pt = self.head

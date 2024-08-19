@@ -31,7 +31,7 @@ BLUE2 = (0, 100, 255)
 BLACK = (0,0,0)
 
 BLOCK_SIZE = 20   # size of each block in game
-SPEED = 300   #speed of snake in game
+SPEED = 30   #speed of snake in game
 
 class SnakeGameAI:
     

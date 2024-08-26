@@ -24,7 +24,7 @@ This project demonstrates how an AI agent can be trained to master the game of S
 ## Gameplay
 
 - **Game Screenshot**:<img src="assets\game-play.png" alt="Snake" width="600" />
-  ![Gameplay](assets\snake.gif)
+  ![Gameplay](snake.gif)
 
 ## Game Components
 
